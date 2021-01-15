@@ -258,7 +258,7 @@ router.post('/service/',async function(req,res){
 	var cwid = Object.keys(response)[0];
     var now = new Date();
 	var ClientIPAddress = (req.headers['x-forwarded-for'] || '').split(',')[0] || req.connection.remoteAddress;
-	var excludeclients = ['Growing Up Green Charter School'];
+	var excludeclients = ['client to exclude'];
     console.log("Timestamp: "+now+" Client IP: "+ ClientIPAddress);
 	
     if (response.action === "added" & response.memberId != "labtech") 
